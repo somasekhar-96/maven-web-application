@@ -20,12 +20,12 @@ node {
 }
  
 }
-   stage('sendig email notification'){
+  /* stage('sendig email notification'){
   mail bcc: '', body: '''Buid over..
 
 regards by 
 somumuthyala...''', cc: 'sekharprabas1996@gmail.com', from: '', replyTo: '', subject: 'build over..', to: 'sekharprabas1996@gmail.com'
  
 }
-    
+ */   
 }
