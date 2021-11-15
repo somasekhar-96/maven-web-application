@@ -1,5 +1,5 @@
 node {
-  def mavenhome= tool name: "maven3.8.3"
+  def mavenhome= tool name: "maven3.8.2"
   stage ('cloning the code from git hub'){
   git branch: 'development', credentialsId: 'cd853bd4-8b67-4dff-b958-80fc6fd1c380', url: 'https://github.com/somasekhar-96/maven-web-application.git'
   }
@@ -15,7 +15,7 @@ node {
 }
     stage('deploy to tomcat'){
   sshagent(['cb9dac06-3bbb-4bd9-bc11-6f24840a2bd1']) {
-  sh "scp -o  StrictHostKeyChecking=no target/maven-web-application.war ec2-user@52.66.173.29:/opt/apache-tomcat-9.0.54/webapps/"
+  sh "scp -o  StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.110.106.58:/opt/apache-tomcat-9.0.54/webapps/"
   
 }
  
